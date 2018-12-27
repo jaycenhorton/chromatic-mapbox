@@ -1,3 +1,8 @@
+# Notes:
+
+- To reproduce the bug, see branch: `master`
+- To reproduce temporary patch to get chromatic working, run on branch: `fix-chromatic`
+
 # Reproduce chromatic bug
 
 `yarn run chromatic`
