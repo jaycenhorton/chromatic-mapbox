@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Map from './Map';
+import Map from '../components/Map';
 
 storiesOf('Map', module).add('default', () => <Map />);
