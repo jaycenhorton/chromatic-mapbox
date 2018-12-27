@@ -1,7 +1,7 @@
 # Notes:
 
 - To reproduce the bug, see branch: `master`
-- To reproduce temporary patch to get chromatic working, run on branch: `fix-chromatic`
+- To reproduce temporary patch to get chromatic working, run on branch: `fix-chromatic` or [see here](https://github.com/jaycenhorton/chromatic-mapbox/pull/1)
 
 # Reproduce chromatic bug
 
