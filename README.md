@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Reproduce chromatic bug
 
-## Available Scripts
+`yarn run chromatic`
 
-In the project directory, you can run:
+## Error output:
 
-### `npm start`
+```
+> yarn run chromatic
+yarn run v1.12.3
+$ ./node_modules/.bin/chromatic test --app-code='jxfm5y5n8z'
+Chromatic Tester: Detected 'storybook' script, running with inferred options:
+    --script-name=storybook --storybook-port=9009
+  Override any of the above if they were inferred incorrectly.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Chromatic Tester: Starting storybook
+Chromatic Tester: Started storybook at http://localhost:9009/iframe.html
+Chromatic Tester: Opening tunnel to Chromatic capture servers
+Chromatic Tester: Uploading and verifying build (this may take a few minutes depending on your connection)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Your app logged the following to the error console:
+=========================
+TypeError: window.URL.createObjectURL is not a function
+    at define (https://hulhdnsgek.tunnel.chromaticqa.com/vendors~main.1bce5037a401d4df902f.bundle.js:25132:37)
+    at https://hulhdnsgek.tunnel.chromaticqa.com/vendors~main.1bce5037a401d4df902f.bundle.js:25141:1
+    at push../node_modules/mapbox-gl/dist/mapbox-gl.js.r (https://hulhdnsgek.tunnel.chromaticqa.com/vendors~main.1bce5037a401d4df902f.bundle.js:25112:26)
+    at Object../node_modules/mapbox-gl/dist/mapbox-gl.js (https://hulhdnsgek.tunnel.chromaticqa.com/vendors~main.1bce5037a401d4df902f.bundle.js:25114:2)
+    at __webpack_require__ (https://hulhdnsgek.tunnel.chromaticqa.com/runtime~main.1bce5037a401d4df902f.bundle.js:782:30)
+    at fn (https://hulhdnsgek.tunnel.chromaticqa.com/runtime~main.1bce5037a401d4df902f.bundle.js:150:20)
+    at Object../node_modules/react-map-gl/dist/es5/utils/mapboxgl.browser.js (https://hulhdnsgek.tunnel.chromaticqa.com/vendors~main.1bce5037a401d4df902f.bundle.js:53185:40)
+    at __webpack_require__ (https://hulhdnsgek.tunnel.chromaticqa.com/runtime~main.1bce5037a401d4df902f.bundle.js:782:30)
+    at fn (https://hulhdnsgek.tunnel.chromaticqa.com/runtime~main.1bce5037a401d4df902f.bundle.js:150:20)
+    at Object../node_modules/react-map-gl/dist/es5/components/static-map.js (https://hulhdnsgek.tunnel.chromaticqa.com/vendors~main.1bce5037a401d4df902f.bundle.js:50503:40)
 
-### `npm test`
+=========================
+This may lead to some stories not working right or getting detected by Chromatic
+We suggest you fix the errors, but we will continue anyway..
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Chromatic build failed. Please note the session id: 'f6e60177-fd07-4eb3-ad90-e50a0454cb6a' and contact support@hichroma.com -or- open a support ticket at https://chromaticqa.com**
 
-### `npm run build`
+Error: Cannot run a build with no stories. Please add some stories!
+    at /home/ubuntu/dev/tmp/chromatic-mapbox/node_modules/storybook-chromatic/dist/tester.js:1:9363
+    at tryCatch (/home/ubuntu/dev/tmp/chromatic-mapbox/node_modules/babel-runtime/node_modules/regenerator-runtime/runtime.js:62:40)
+    at Generator.invoke [as _invoke] (/home/ubuntu/dev/tmp/chromatic-mapbox/node_modules/babel-runtime/node_modules/regenerator-runtime/runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (/home/ubuntu/dev/tmp/chromatic-mapbox/node_modules/babel-runtime/node_modules/regenerator-runtime/runtime.js:114:21)
+    at step (/home/ubuntu/dev/tmp/chromatic-mapbox/node_modules/babel-runtime/helpers/asyncToGenerator.js:17:30)
+    at /home/ubuntu/dev/tmp/chromatic-mapbox/node_modules/babel-runtime/helpers/asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+error Command failed with exit code 255.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+```
