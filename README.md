@@ -1,3 +1,5 @@
+# THIS WAS RESOLVED IN THE LATEST VERSION OF CHROMATIC
+
 # Notes:
 
 - To reproduce the bug, see branch: `master`
